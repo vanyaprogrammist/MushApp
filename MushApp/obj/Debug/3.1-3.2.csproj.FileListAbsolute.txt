@@ -1,0 +1,17 @@
+C:\VsProjects\MushApp\MushApp\bin\Debug\MushApp.exe.config
+C:\VsProjects\MushApp\MushApp\bin\Debug\MushApp.exe
+C:\VsProjects\MushApp\MushApp\bin\Debug\MushApp.pdb
+C:\VsProjects\MushApp\MushApp\bin\Debug\Newtonsoft.Json.dll
+C:\VsProjects\MushApp\MushApp\bin\Debug\Newtonsoft.Json.xml
+C:\VsProjects\MushApp\MushApp\obj\Debug\3.1-3.2.csprojResolveAssemblyReference.cache
+C:\VsProjects\MushApp\MushApp\obj\Debug\3.1-3.2.csproj.CoreCompileInputs.cache
+C:\VsProjects\MushApp\MushApp\obj\Debug\MushApp.exe
+C:\VsProjects\MushApp\MushApp\obj\Debug\MushApp.pdb
+C:\VsProjects\MushApp\MushApp\bin\Debug\ClosedXML.dll
+C:\VsProjects\MushApp\MushApp\bin\Debug\DocumentFormat.OpenXml.dll
+C:\VsProjects\MushApp\MushApp\bin\Debug\FastMember.Signed.dll
+C:\VsProjects\MushApp\MushApp\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\VsProjects\MushApp\MushApp\bin\Debug\System.IO.Packaging.dll
+C:\VsProjects\MushApp\MushApp\bin\Debug\ClosedXML.pdb
+C:\VsProjects\MushApp\MushApp\bin\Debug\ClosedXML.xml
+C:\VsProjects\MushApp\MushApp\bin\Debug\DocumentFormat.OpenXml.xml
