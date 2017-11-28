@@ -42,7 +42,8 @@ namespace MushApp.Strategs
                         decimal bmochn = KfHighStrategy.BMochn(Kf,
                             P, PoIgroup);
                         decimal maximum = KfHighStrategy.Maximum(btochn, bmochn);
-                        decimal brasch = KfHighStrategy.BRasch(maximum);
+                        decimal mil = KfHighStrategy.Mil(maximum);
+                        decimal brasch = KfHighStrategy.BRasch(mil);
                         decimal lrasch = KfHighStrategy.LRasch(Kf, brasch);
                         decimal lpoln = KfHighStrategy.LPoln(lrasch);
                         decimal square = KfHighStrategy.Square(lpoln, brasch);
@@ -67,7 +68,8 @@ namespace MushApp.Strategs
                         decimal bmochn = KfHighStrategy.BMochn(Kf,
                             P, PoIIgroup);
                         decimal maximum = KfHighStrategy.Maximum(btochn, bmochn);
-                        decimal brasch = KfHighStrategy.BRasch(maximum);
+                        decimal mil = KfHighStrategy.Mil(maximum);
+                        decimal brasch = KfHighStrategy.BRasch(mil);
                         decimal lrasch = KfHighStrategy.LRasch(Kf, brasch);
                         decimal lpoln = KfHighStrategy.LPoln(lrasch);
                         decimal square = KfHighStrategy.Square(lpoln, brasch);
@@ -93,8 +95,10 @@ namespace MushApp.Strategs
                     {
                         decimal ltochn = KfLowStrategy.LTochn(Kf, YkfDopIgroup);
                         decimal lmochn = KfLowStrategy.LMochn(Kf, P, PoIgroup);
+                        
                         decimal maximum = KfLowStrategy.Maximum(ltochn, lmochn);
-                        decimal lrasch = KfLowStrategy.LRasch(maximum);
+                        decimal mil = KfLowStrategy.Mil(maximum);
+                        decimal lrasch = KfLowStrategy.LRasch(mil);
                         decimal brasch = KfLowStrategy.Brasch(lrasch, Kf);
                         decimal lpoln = KfLowStrategy.LPoln(lrasch);
                         decimal square = KfLowStrategy.Square(lpoln, brasch);
@@ -118,7 +122,8 @@ namespace MushApp.Strategs
                         decimal ltochn = KfLowStrategy.LTochn(Kf, YkfDopIIgroup);
                         decimal lmochn = KfLowStrategy.LMochn(Kf, P, PoIIgroup);
                         decimal maximum = KfLowStrategy.Maximum(ltochn, lmochn);
-                        decimal lrasch = KfLowStrategy.LRasch(maximum);
+                        decimal mil = KfLowStrategy.Mil(maximum);
+                        decimal lrasch = KfLowStrategy.LRasch(mil);
                         decimal brasch = KfLowStrategy.Brasch(lrasch, Kf);
                         decimal lpoln = KfLowStrategy.LPoln(lrasch);
                         decimal square = KfLowStrategy.Square(lpoln, brasch);

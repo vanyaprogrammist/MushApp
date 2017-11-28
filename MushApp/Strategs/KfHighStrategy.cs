@@ -25,12 +25,16 @@ namespace MushApp.Strategs
             return new [] {btochn, bmochn, bmin }.Max();
         }
 
+        public static decimal Mil(decimal micron)
+        {
+            return micron / 1000;
+        }
+
         public static decimal BRasch(decimal maximum)
         {
-            //делаем милиметры
-            decimal mil = maximum / 1000;
+            
             //Округляем по нормальным правилам
-            decimal round = Math.Round(mil, 2, MidpointRounding.AwayFromZero);
+            decimal round = Math.Round(maximum, 2, MidpointRounding.AwayFromZero);
             //1.1 | +0.5 | 1.15 
             decimal five = Clip10(round) + (decimal)0.05;
 
@@ -55,7 +59,8 @@ namespace MushApp.Strategs
 
         public static decimal LRasch(decimal Kf, decimal brasch)
         {
-            return Kf * brasch;
+            return 
+            KfLowStrategy.LRasch(Kf * brasch);
         }
 
         public static decimal LPoln(decimal lrasch)
