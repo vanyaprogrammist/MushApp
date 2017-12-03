@@ -32,9 +32,20 @@ namespace MushApp.Strategs
 
         public static decimal BRasch(decimal maximum)
         {
-            
-            //Округляем по нормальным правилам
-            decimal round = Math.Round(maximum, 2, MidpointRounding.AwayFromZero);
+            decimal round;
+            decimal two = ClipReverse(maximum, 2);
+            decimal twotwo = ClipReverse(maximum, 2);
+            decimal three = ClipReverse(maximum, 3);
+            if ((ClipReverse(maximum, 2) == (decimal) 0.05 || ClipReverse(maximum, 2) == 0) && ClipReverse(maximum, 3) != 0)
+            {
+                
+                    round = Clip(maximum,2)+(decimal)0.01;
+            }
+            else
+            {
+                //Округляем по нормальным правилам
+                round = Math.Round(maximum, 2, MidpointRounding.AwayFromZero);
+            }
             //1.1 | +0.5 | 1.15 
             decimal five = Clip10(round) + (decimal)0.05;
 
@@ -72,6 +83,26 @@ namespace MushApp.Strategs
         {
             return lpoln * brasch;
         }
+
+        public static decimal Clip(decimal number, int numeral)
+        {
+            number = number * (decimal)Math.Pow(10,numeral);
+            int a = (int)number;
+            number = (decimal)a / (decimal)Math.Pow(10, numeral);
+            return number;
+        }
+
+        public static decimal ClipReverse(decimal number, int numeral)
+        {
+            numeral = numeral - 1;
+            decimal a = number * (decimal)Math.Pow(10,numeral);
+            int b = (int)a;
+            decimal c = a - b;
+            c = c / (decimal)Math.Pow(10, numeral);
+            c = Clip(c, numeral + 1);
+            return c;
+        }
+       
 
         private static decimal Clip10(decimal number)
         {

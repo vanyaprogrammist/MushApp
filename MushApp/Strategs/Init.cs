@@ -25,8 +25,8 @@ namespace MushApp.Strategs
 
         private readonly decimal PoIgroup = 1;
         private readonly decimal PoIIgroup = 2;
-        private readonly decimal YkfDopIgroup = (decimal) 0.017;
-        private readonly decimal YkfDopIIgroup = (decimal) 0.016;
+        private readonly decimal YkfDopIgroup = (decimal) 0.0173;
+        private readonly decimal YkfDopIIgroup = (decimal) 0.0155;
 
         public void Strat()
         {
